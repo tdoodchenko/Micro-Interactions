@@ -1,8 +1,15 @@
-#wrapper {
+.heart-beat {
 	position: absolute;
   margin-left: 48%;
   margin-top: 50px;
-	animation:pulse 1s infinite;
+	animation:pulse 3s infinite;
+}
+
+.heart-off {
+  position: absolute;
+  margin-left: 48%;
+  margin-top: 50px;
+	animation:none;
 }
 
 
@@ -23,14 +30,14 @@
   border-radius: 50px 50px 0 0; 
   transform: rotate(-45deg);  
   transform-origin: 0 100%;
-  animation:pulsecolor 1s infinite;
+  animation:pulsecolor 3s infinite;
 } 
 
 #pulsingheart:after { 
   left: 0; 
   transform: rotate(45deg); 
   transform-origin :100% 100%;
-  animation:pulsecolor 1s infinite;
+  animation:pulsecolor 3s infinite;
 }
 
 @keyframes pulse {
@@ -39,4 +46,27 @@
 
 @keyframes pulsecolor {
   10% {background: #dd0000}
+} 
+
+#clickedheart:before, #clickedheart:after { 
+  position: absolute; 
+  content: ""; 
+  left: 14px; 
+  top: 0; 
+  width: 15px; 
+  height: 24px; 
+  background: #dd0000;
+  border-radius: 50px 50px 0 0; 
+  transform: rotate(-45deg);  
+  transform-origin: 0 100%;
+  animation:pulsecolor 0s infinite;
+
+} 
+
+#clickedheart:after { 
+  left: 0; 
+  transform: rotate(45deg); 
+  transform-origin :100% 100%;
+  animation:pulsecolor 0s infinite;
+
 }
